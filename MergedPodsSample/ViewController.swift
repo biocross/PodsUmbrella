@@ -8,11 +8,12 @@
 
 import UIKit
 import Alamofire
-import AFNetworking
 import SDWebImage
-import MBProgressHUD
 import SwiftyJSON
 import SecureDefaults
+
+import MergedPods.MBProgressHUD
+import MergedPods.AFNetworking
 
 class ViewController: UIViewController {
 
@@ -21,10 +22,16 @@ class ViewController: UIViewController {
         
         MBProgressHUD.showAdded(to: self.view, animated: true)
         
+        let manager = AFHTTPSessionManager.init(sessionConfiguration: URLSessionConfiguration.default)
+        let request = URLRequest(url: URL(string: "https://httpbin.org/get")!)
+
+        manager.dataTask(with: request) { (_, _, _) in
+            MBProgressHUD.hide(for: self.view, animated: true)
+        }.resume()
+        
         Alamofire.request("https://httpbin.org/get").responseJSON { _ in
             MBProgressHUD.hide(for: self.view, animated: true)
         }
-    
     }
 
 

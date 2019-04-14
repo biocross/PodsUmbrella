@@ -1,0 +1,21 @@
+framework module MergedPods {
+    
+    explicit module MBProgressHUD {
+        header "MBProgressHUD.h"
+        export CoreGraphics
+        export Foundation
+        export UIKit
+    }
+    
+    explicit module AFNetworking {
+        header "AFHTTPSessionManager.h"
+        header "AFURLSessionManager.h"
+        header "AFURLResponseSerialization.h"
+        header "AFURLRequestSerialization.h"
+        header "AFSecurityPolicy.h"
+        header "AFCompatibilityMacros.h"
+        header "AFNetworkReachabilityManager.h"
+        export Foundation
+        export UIKit
+    }
+}
