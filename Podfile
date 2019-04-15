@@ -6,9 +6,9 @@ target 'MergedPodsSample' do
 #  pod 'AFNetworking'
   pod 'Alamofire'
 #  pod 'MBProgressHUD'
-  pod 'SDWebImage'
-  pod 'SecureDefaults', '1.0.0'
-  pod 'SwiftyJSON', '4.2.0'
+#  pod 'SDWebImage'
+#  pod 'SecureDefaults', '1.0.0'
+#  pod 'SwiftyJSON', '4.2.0'
 
 
 end

@@ -7,33 +7,37 @@
 //
 
 import UIKit
-import Alamofire
-import SDWebImage
-import SwiftyJSON
-import SecureDefaults
 
+// ObjC
 import MergedPods.MBProgressHUD
 import MergedPods.AFNetworking
 
+// Swift
+import MergedSwiftPods
+
+
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        MBProgressHUD.showAdded(to: self.view, animated: true)
-        
-        let manager = AFHTTPSessionManager.init(sessionConfiguration: URLSessionConfiguration.default)
-        let request = URLRequest(url: URL(string: "https://httpbin.org/get")!)
+  let error: SwiftyJSONError = .unsupportedType
+  let some: JSON = JSON(arrayLiteral: [])
 
-        manager.dataTask(with: request) { (_, _, _) in
-            MBProgressHUD.hide(for: self.view, animated: true)
-        }.resume()
-        
-        Alamofire.request("https://httpbin.org/get").responseJSON { _ in
-            MBProgressHUD.hide(for: self.view, animated: true)
-        }
+  override func viewDidLoad() {
+    super.viewDidLoad()
+
+    MBProgressHUD.showAdded(to: self.view, animated: true)
+
+    let manager = AFHTTPSessionManager.init(sessionConfiguration: URLSessionConfiguration.default)
+    let request = URLRequest(url: URL(string: "https://httpbin.org/get")!)
+
+    manager.dataTask(with: request, uploadProgress: nil, downloadProgress: nil) { (_, _, _) in
+      MBProgressHUD.hide(for: self.view, animated: true)
     }
 
+//    Alamofire.request("https://httpbin.org/get").responseJSON { _ in
+//      MBProgressHUD.hide(for: self.view, animated: true)
+//    }
 
+    _ = SecureDefaults.init(suiteName: "MySecureDefaults")
+  }
 }
 

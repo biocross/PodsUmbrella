@@ -1,0 +1,9 @@
+framework module MergedSwiftPods {
+
+  explicit module Alamofire {
+    
+  }
+
+}
+
+
