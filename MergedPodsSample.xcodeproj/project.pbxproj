@@ -79,6 +79,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		061084F5E3A09651D7F44C0B /* Pods-MergedPodsSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MergedPodsSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MergedPodsSample/Pods-MergedPodsSample.debug.xcconfig"; sourceTree = "<group>"; };
 		16A9374622623E5000CB6826 /* MergedPodsSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MergedPodsSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16A9374922623E5000CB6826 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16A9374B22623E5000CB6826 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +128,7 @@
 		16CF45E722631E2300091126 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		16CF45EB226320EF00091126 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		30D7F72D45F0CE9FCC649E07 /* Pods_MergedPodsSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MergedPodsSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7053DF8D9AF0DBD81E7DBC5E /* Pods-MergedPodsSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MergedPodsSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-MergedPodsSample/Pods-MergedPodsSample.release.xcconfig"; sourceTree = "<group>"; };
 		A94F44C8B0C1354E26C319CF /* Pods-MergedPodsSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MergedPodsSample.release.xcconfig"; path = "Target Support Files/Pods-MergedPodsSample/Pods-MergedPodsSample.release.xcconfig"; sourceTree = "<group>"; };
 		C1EC67BA25D7DFBCA54A6612 /* Pods-MergedPodsSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MergedPodsSample.debug.xcconfig"; path = "Target Support Files/Pods-MergedPodsSample/Pods-MergedPodsSample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -259,6 +261,8 @@
 			children = (
 				C1EC67BA25D7DFBCA54A6612 /* Pods-MergedPodsSample.debug.xcconfig */,
 				A94F44C8B0C1354E26C319CF /* Pods-MergedPodsSample.release.xcconfig */,
+				061084F5E3A09651D7F44C0B /* Pods-MergedPodsSample.debug.xcconfig */,
+				7053DF8D9AF0DBD81E7DBC5E /* Pods-MergedPodsSample.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -402,7 +406,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MergedPodsSample/Pods-MergedPodsSample-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-MergedPodsSample/Pods-MergedPodsSample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SecureDefaults/SecureDefaults.framework",
@@ -419,7 +423,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MergedPodsSample/Pods-MergedPodsSample-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MergedPodsSample/Pods-MergedPodsSample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D1D78195C125EDC5B52B43BB /* [CP] Check Pods Manifest.lock */ = {
@@ -560,7 +564,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -615,7 +619,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -640,7 +644,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.grabtaxi.iphone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -660,7 +664,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.grabtaxi.iphone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
